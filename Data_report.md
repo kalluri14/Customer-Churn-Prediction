@@ -15,3 +15,10 @@
 - **Categorical Features** → One-Hot Encoding
 - **Numerical Features** → StandardScaler
 - **Feature Selection** → Drop low-impact features
+
+# Analyses from Feature Engineering
+    - First we drop the unnecessary column (Customer ID)
+    - Encode Categorical columns
+    - Starting off with SeniorCitizen column which was originally int datatype and has unique values[0,1], so do we have to scale?
+    - Yes, if we are using any model in future except for tree models , to maintain consistency across models it is good practice to scale it for better convergence and performance of models
+    -

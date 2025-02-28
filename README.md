@@ -5,14 +5,16 @@ We have used the Telecom_churn dataset from kaggle
 
 ## Step2: Data preprocessing
     - Data (There are total 20 columns, 7043 entries from 0 to 7042)
+    - Check for data type of each column, TotalCharges was originally object but then we convert it to float type
     - check for missing and null values (all are non null, so total null values : 0)
     - check for duplicates(There are no duplicates)
-    - check for categorical data(other than 3 columns(SeniorCitizen, Tenure and MonthlyCharges) all the other are categorical columns)
+    - check for categorical data(other than 3 columns(SeniorCitizen, Tenure, TotalCharges and MonthlyCharges) all the other are categorical columns)
 
     - Summary Stats of numeric columns:
         - SeniorCitizen: It is binary(Senior : 0 and Not Senior: 1) only 0.16 that is 16% of citizens are senior citizens
         - Tenure: On an average the no.of years worked are 32(mean), where as half of the persons tenure is <= 29 since meadian (50%) = 29, max no.of years worked = 72, min = 0
         - MonthlyCharges: Average monthly bill is 64$ and mini or chepest plan is 18$ and the costliest , highest is 118$, with half of the customers paying $70 or less
+        - TotalCharges: Average Total Charge is 2279$ and mini charge starts from O to max charge 8684 $, half of the customers paying $1394 or less
 
     - Check for distributions:
         - we divide our data into mainly 3 sets 
@@ -45,6 +47,15 @@ We have used the Telecom_churn dataset from kaggle
     - we reject or accept the null hypo based on the p-value we get from our test.
 
 ## Step4: Feature Engineering
+
+    - Encoding categorical columns
+    - scaling numerical columns
+    
+## Step5; Feature Selection
+
+    - Drop low importance features, check correlation with churn
+
+
 
 
 
